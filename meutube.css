@@ -1,0 +1,119 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+html, body{
+	height: 100%;
+	background-color: black;
+	color: white;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#pagina{
+	display: grid;
+	grid-template-areas:'t t'
+						'v r'
+						'f f';
+	height: 100%;
+	
+	margin: auto;
+	grid-template-rows: 70px 1fr 40px;
+	grid-template-columns: 3fr 1fr;
+}
+
+#topo{
+	grid-area: t;
+	background-color: rgb(83,82,82,0.5);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+#logo img{
+	height: 50px;
+	float: left;
+	margin-right: 20px;
+}
+
+#logo{
+	font-size: 25px;
+	line-height: 50px;
+	font-weight: bold;
+	padding: 10px;
+
+}
+
+#logo span{
+	color: red;
+}
+
+#topo nav{
+	margin-right: 20px;
+}
+
+#menu{
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
+#menu li a{
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+}
+
+#menu li a:hover{
+	background-color: white;
+	color: rgb(83,82,82,0.5);
+}
+
+#player{
+	padding: 20px;
+	grid-area: v;
+}
+
+#player video{
+	width: 100%;
+}
+
+#player textarea{
+	padding: 10px;
+	width: calc(100% - 20px);
+	min-height: 200px;
+}
+
+#relacionados{
+	padding: 20px;
+	grid-area: r;
+	max-height: 100%;
+	overflow-y: scroll;
+}
+
+#relacionados ul li a img{
+	width: 100%;
+}
+
+#relacionados ul li{
+	margin-bottom: 10px;
+	border: 10px solid rgba(83, 82, 82, 0.5);
+}
+
+#relacionados ul li:hover{
+	border-color: white;
+}
+
+#footer{
+	background-color: rgba(83, 82, 82, 0.5);
+	grid-area: f;
+	text-align: center;
+	line-height: 40px;
+}
+
+#footer span{
+	background-color: red;
+	font-weight: bold;
+}
